@@ -13,7 +13,7 @@ class Calculator{
            * @param {number} b
            * @returns {number} a - b; 
           **/
-         return a + b;
+          return a + b;
      }
 
      subtract(a, b){
@@ -57,7 +57,6 @@ class Calculator{
 
      round_up(a){
           /**
-           * @description This function rounds up a number
            * @param {number} a 
            * @returns {number} a rounded up 
           **/
@@ -66,7 +65,6 @@ class Calculator{
 
      round_down(a){
           /**
-           * @description This functon rounds down a number
            * @param {number} a 
            * @returns {number} a rounded down 
           **/
@@ -86,7 +84,11 @@ function get_input(operation, num1, num2){
  * @param {number} num1 
  * @param {number} num2 
 **/
-     doOperation(operation, num1, num2);
+     if(typeof num1 == "number" && typeof num2 == "number" && typeof operation == "string"){
+          doOperation(operation, num1, num2);
+     }else{
+          console.error("Return invalid types!");
+     }
 }
 
 function doOperation(operation, num1, num2){
@@ -95,7 +97,7 @@ function doOperation(operation, num1, num2){
  * @param {string} operation
  * @param {number} num1
  * @param {number} num2
- *  @returns {number} the result of the operation
+ * @returns {number} the result of the operation
 **/
      switch(operation){
           case "+":
