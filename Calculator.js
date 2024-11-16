@@ -5,8 +5,7 @@
 **/
 
 class Calculator{
-     constructor(){}
-     
+
      add(a, b){
           /**
            * @description This method adds two numbers
@@ -76,26 +75,30 @@ class Calculator{
 // Create an instance of Calculator
 var calculator = new Calculator();
 
+
+function get_input(operation, num1, num2){
 /**
  * @description Get the first two numbers and add them
  * @calls DoOperation 
+ * @param {string} operation 
+ * @param {number} num1 
+ * @param {number} num2 
 **/
-function get_input(operation, num1, num2){
      doOperation(operation, num1, num2);
 }
 
+function doOperation(operation, num1, num2){
 /**
  * @description This does the operation provided from the get_input function
  * @param {string} operation
  * @param {number} num1
- * @param {number} num2*
+ * @param {number} num2
  *  @returns {number} the result of the operation
 **/
-function doOperation(operation, num1, num2){
      switch(operation){
           case "+":
                calculator.add(num1, num2);
-               break; 
+               break;      
           case "-":
                calculator.subtract(num1, num2);
                break; 
