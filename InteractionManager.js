@@ -10,6 +10,20 @@ class InteractionManager{
        return input == "";
     }
 
+    is_input_too_long(input, length){
+        /**
+         * @description This method checks whether or not the input is too long 
+         * @param {string} input 
+         * @param {number} length 
+         * @returns {string} whether or not the input is too long
+         **/
+        if(toString(input).length() > parseInt(length)){
+            return Boolean.toString(true);
+        }else{
+            return Boolean.toString(false);
+        }
+    }
+
     is_string(input){
         /**
          * @param input 
