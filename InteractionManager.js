@@ -26,7 +26,7 @@ class InteractionManager{
          * @method is_number
          * @returns whether or not the parameter is a number
          */
-        return input == typeof 0;
+        return input == typeof "number";
     }
 
     is_input_boolean(input){
@@ -35,6 +35,6 @@ class InteractionManager{
          * @method is_input_boolean 
          * @returns whether or not the parameter is a boolean 
         **/
-       return typeof input == true;
+       return typeof input == "boolean";
     }
 };
