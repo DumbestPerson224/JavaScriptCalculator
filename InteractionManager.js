@@ -11,7 +11,7 @@ class Calculator{
            * @description This method adds two numbers
            * @param {number} a 
            * @param {number} b
-           * @returns {number} a - b; 
+           * @returns {number} a + b; 
           **/
          return a + b;
      }
