@@ -57,6 +57,7 @@ class Calculator{
 
      round_up(a){
           /**
+           * @description This function rounds up a number
            * @param {number} a 
            * @returns {number} a rounded up 
           **/
@@ -65,6 +66,7 @@ class Calculator{
 
      round_down(a){
           /**
+           * @description This functon rounds down a number
            * @param {number} a 
            * @returns {number} a rounded down 
           **/
