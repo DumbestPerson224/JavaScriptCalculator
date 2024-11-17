@@ -45,7 +45,7 @@ class Calculator{
            * @returns a / b 
           **/
           try{
-               if(a != b){
+               if(a != 0){
                     return a / b;
                }else{
                     throw "Division by zero error";
