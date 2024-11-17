@@ -78,7 +78,7 @@ var calculator = new Calculator();
 
 function get_input(operation, num1, num2){
 /**
- * @description Get the first two numbers and add them
+ * @description Get the parameters and call DoOperation with the parameters
  * @calls DoOperation 
  * @param {string} operation 
  * @param {number} num1 
