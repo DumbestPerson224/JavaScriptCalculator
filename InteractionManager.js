@@ -1,127 +1,54 @@
-/**
- * @author WorldsDumbestPerson224
- * @copyright 2024
- * @readonly true
-**/
+class InteractionManager{
+    
+    is_input_empty(input){
+        /** 
+        * @description This method checks whether or not the parameter is empty
+        * @param {any} input 
+        * @method is_input_empty
+        * @returns {boolean} whether or not the parameter is empty
+        **/
+       return input == "";
+    }
 
-class Calculator{
+    is_input_too_long(input, length){
+        /**
+         * @description This method checks whether or not the input is too long 
+         * @param {string} input 
+         * @param {number} length 
+         * @returns {string} whether or not the input is too long
+         **/
+        if(toString(input).length() > parseInt(length)){
+            return Boolean.toString(true);
+        }else{
+            return Boolean.toString(false);
+        }
+    }
 
-     add(a, b){
-          /**
-           * @description This method adds two numbers
-           * @param {number} a 
-           * @param {number} b
-           * @returns {number} a + b; 
-          **/
-         return a + b;
-     }
+    is_string(input){
+        /**
+         * @param input 
+         * @method is_string
+         * @returns {boolean} whether or not the parameter is a string
+        **/
+        return typeof input == "string"; 
+    }
 
-     subtract(a, b){
-          /**
-           * @description This method subtracts two numbers
-           * @param {number} a 
-           * @param {number} b
-           * @returns {number} a - b;
-          **/
-         return a - b;
-     }
+    is_number(input){
+        /**
+         * @description This method checks if the parameter is a number
+         * @param input 
+         * @method is_number
+         * @returns whether or not the parameter is a number
+         */
+        return input == typeof "number";
+    }
 
-     multiply(a, b){
-          /**
-           * @description This method multiplies two numbers
-           * @param {number} a 
-           * @param {number} b 
-           * @returns {number} a * b 
-          **/
-         return a * b;
-     }
-
-     divide(a, b){
-          /**
-           * @description This method divides two numbers
-           * @param {number} a 
-           * @param {number} b 
-           * @throws {string} "Division by zero error"
-           * @returns a / b 
-          **/
-          try{
-               if(a != b){
-                    return a / b;
-               }else{
-                    throw "Division by zero error";
-               }
-          }catch(error){
-               console.error(error);
-          }
-     }
-
-     round_up(a){
-          /**
-           * @description This function rounds up a number
-           * @param {number} a 
-           * @returns {number} a rounded up 
-          **/
-          return Math.ceil(a);
-     }
-
-     round_down(a){
-          /**
-           * @description This functon rounds down a number
-           * @param {number} a 
-           * @returns {number} a rounded down 
-          **/
-         return Math.floor(a);
-     }
-}
-
-// Create an instance of Calculator
-var calculator = new Calculator();
-
-
-function get_input(operation, num1, num2){
-     /**
-      * @description Get the parameters and check if they are valid types if they are call doOperation otherwise return Invalid Type
-      * @calls DoOperation 
-      * @param {string} operation 
-      * @param {number} num1 
-      * @param {number} num2 
-      * @returns {string} Invalid Type
-     **/
-     if(typeof operation == "string" && typeof num1 == "number" && typeof num2 == "number"){
-          doOperation(operation, num1, num2);
-     }else{
-          return "Invalid type!";
-     }
-}
-
-function doOperation(operation, num1, num2){
-     /**
-      * @description This does the operation provided from the get_input function
-      * @param {string} operation
-      * @param {number} num1
-      * @param {number} num2
-      *  @returns {number} the result of the operation
-     **/
-     switch(operation){
-          case "+":
-               calculator.add(num1, num2);
-               break;      
-          case "-":
-               calculator.subtract(num1, num2);
-               break; 
-          case "*":
-               calculator.multiply(num1, num2);
-               break; 
-          case "/":
-               calculator.divide(num1, num2);
-               break;
-          case "roundup":
-               calculator.round_up(num1);
-               break;
-          case "rounddown":
-               calculator.round_down(num1);
-               break;
-          default:
-               console.error("No operand provided!");
-     }
-}
+    is_input_boolean(input){
+        /** 
+         * @param input 
+         * @method is_input_boolean 
+         * @returns whether or not the parameter is a boolean 
+        **/
+       return typeof input == "boolean";
+    }
+};
